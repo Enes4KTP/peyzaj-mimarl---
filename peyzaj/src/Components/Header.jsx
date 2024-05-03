@@ -1,12 +1,10 @@
 import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
 import Link from "@mui/material/Link";
 import foto from "../images/image2bg.png";
 import { useState } from "react";
-import { Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 function Header() {
   const [isHovered1, setIsHovered1] = useState(false);
@@ -29,84 +27,73 @@ function Header() {
           sx={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
+            justifyContent: "center",
             alignItems: "center",
             height: "100%",
           }}
         >
-          <img
-            src={foto}
-            alt="logo"
-            style={{ margin: "5rem", height: "100px" }}
-          />
-          <Box
-            variant="div"
+          <Link
+            component={RouterLink}
+            to="/"
+            onMouseEnter={() => setIsHovered1(true)}
+            onMouseLeave={() => setIsHovered1(false)}
             sx={{
-              display: "flex",
+              color: "#3E7A3D",
+              marginRight: "2rem",
+              textDecoration: "none",
+              textTransform: "uppercase",
+              borderBottom: "3px solid #3E7A3D",
+              transition: "transform 0.3s ease",
+              transform: isHovered1 ? "translateY(-10px)" : "translateY(0)",
+              "&:hover": {
+                color: "white",
+                borderBottom: "3px solid white",
+              },
             }}
           >
-            <Typography
-              onMouseEnter={() => setIsHovered1(true)}
-              onMouseLeave={() => setIsHovered1(false)}
-              variant="h6"
-              sx={{
-                color: "white",
-                marginRight: "2rem",
-                textDecoration: "none",
-                textTransform: "uppercase",
+            Peyzaj Mimarlığı
+          </Link>
+          <Link
+            component={RouterLink}
+            to="/projeler"
+            onMouseEnter={() => setIsHovered2(true)}
+            onMouseLeave={() => setIsHovered2(false)}
+            sx={{
+              color: "white",
+              marginRight: "2rem",
+              textDecoration: "none",
+              textTransform: "uppercase",
+              transition: "transform 0.3s ease",
+              transform: isHovered2 ? "translateY(-10px)" : "translateY(0)",
+              "&:hover": {
+                color: "#3E7A3D",
                 borderBottom: "3px solid #3E7A3D",
-                transition: "transform 0.3s ease", // Geçiş efekti ekliyoruz
-                transform: isHovered1 ? "translateY(-10px)" : "translateY(0)", // Üzerine gelindiğinde yukarı kayması için transform kullanıyoruz
-                "&:hover": {
-                  color: "white",
-                  borderBottom: "3px solid white",
-                },
-              }}
-              href="#"
-            >
-              Peyzaj Mimarlığı
-            </Typography>
-            <Typography
-              onMouseEnter={() => setIsHovered2(true)}
-              onMouseLeave={() => setIsHovered2(false)}
-              variant="h6"
-              sx={{
-                color: "white",
-                marginRight: "2rem",
-                textDecoration: "none",
-                textTransform: "uppercase",
-                transition: "transform 0.3s ease", // Geçiş efekti ekliyoruz
-                transform: isHovered2 ? "translateY(-10px)" : "translateY(0)", // Üzerine gelindiğinde yukarı kayması için transform kullanıyoruz
-                "&:hover": {
-                  color: "#3E7A3D",
-                  borderBottom: "3px solid #3E7A3D",
-                },
-              }}
-              href="#"
-            >
-              Projeler
-            </Typography>
-            <Typography
-              onMouseEnter={() => setIsHovered3(true)}
-              onMouseLeave={() => setIsHovered3(false)}
-              variant="h6"
-              sx={{
-                color: "white",
-                marginRight: "2rem",
-                textDecoration: "none",
-                textTransform: "uppercase",
-                transition: "transform 0.3s ease", // Geçiş efekti ekliyoruz
-                transform: isHovered3 ? "translateY(-10px)" : "translateY(0)", // Üzerine gelindiğinde yukarı kayması için transform kullanıyoruz
-                "&:hover": {
-                  color: "#3E7A3D",
-                  borderBottom: "3px solid #3E7A3D",
-                },
-              }}
-              href="#"
-            >
-              Bitkiler
-            </Typography>
-          </Box>
+              },
+            }}
+          >
+            Projeler
+          </Link>
+          <Link
+            component={RouterLink}
+            to="/bitkiler"
+            onMouseEnter={() => setIsHovered3(true)}
+            onMouseLeave={() => setIsHovered3(false)}
+            sx={{
+              color: "white",
+              marginRight: "2rem",
+              textDecoration: "none",
+              textTransform: "uppercase",
+              transition: "transform 0.3s ease",
+              transform: isHovered3 ? "translateY(-10px)" : "translateY(0)",
+              "&:hover": {
+                color: "#3E7A3D",
+                borderBottom: "3px solid #3E7A3D",
+              },
+            }}
+            href="#"
+          >
+            Bitkiler
+          </Link>
         </Box>
       </Box>
     </Container>
