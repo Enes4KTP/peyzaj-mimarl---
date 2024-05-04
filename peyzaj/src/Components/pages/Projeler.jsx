@@ -1,64 +1,36 @@
 import { Container, Grid, Typography, Button, Box } from "@mui/material";
 import React, { useState } from "react";
 import foto1 from "../../images/home2.png";
+import foto from "../../images/cevre.avif";
 
 function Projeler() {
   const [animation, setAnimation] = useState(false);
   return (
     <div>
-      {/* <Box
+      <Box
         sx={{
-          width: "100%",
-          height: "200vh",
-          marginTop: "-7rem",
-          paddingTop: "9rem",
+          height: "100vh",
+          marginTop: "-8.7rem",
+          backgroundImage: `url(${foto})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <Typography
           sx={{
+            padding: "0 12%",
+            borderBottom: "4px solid purple",
+            borderTop: "4px solid purple",
             color: "#FF8135",
             textAlign: "center",
-            fontSize: "2.5rem",
+            fontSize: "4rem",
           }}
         >
-          Peyzaj Mimarlarının Sizin için Yaptığı Projeler Neler Olabilir?
+          Peyzaj Mimarlarının{" "}
+          <span style={{ color: "#3E7A3D" }}>Sizin için Yaptığı Projeler</span>{" "}
+          Neler Olabilir?
         </Typography>
-
-        <Box
-          sx={{
-            backgroundColor: "#3E7A3D",
-            height: "50vh",
-            margin: "2rem 12%",
-            borderTopLeftRadius: "50%",
-            borderBottomRightRadius: "60%",
-          }}
-        >
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography
-              sx={{ color: "white", padding: "12%", fontSize: "2rem" }}
-            >
-              Buradaki gibi güzel evlerde oturmanızı peyzaj mimarları sağlar
-            </Typography>
-            <img
-              src={foto1}
-              alt="logo"
-              style={{ height: "25rem", paddingRight: "7rem" }}
-            />
-          </Box>
-        </Box>
-      </Box> */}
-      <Typography
-        sx={{
-          color: "#FF8135",
-          textAlign: "center",
-          marginTop: "2rem",
-          fontSize: "1.5rem",
-        }}
-      >
-        Peyzaj Mimarlarının{" "}
-        <span style={{ color: "#3E7A3D" }}>Sizin için Yaptığı Projeler</span>{" "}
-        Neler Olabilir?
-      </Typography>
+      </Box>
       <section>
         <Container
           sx={{
