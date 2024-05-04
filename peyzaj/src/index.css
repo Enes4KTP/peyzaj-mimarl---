@@ -1,4 +1,22 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: "#faf9f7";
+}
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(50px);
+  }
 }
