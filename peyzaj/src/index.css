@@ -12,6 +12,15 @@
   }
 }
 
+@keyframes moveUpDownPlant {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(250px);
+  }
+}
+
 @keyframes moveRight {
   0% {
     transform: translateX(-50px);
@@ -35,7 +44,7 @@
   bottom: 26px;
   left: 0;
   right: 0;
-  background-color: #08cf79;
+  background-color: #80c225;
   opacity: 0.8;
   overflow: hidden;
   width: 320px;
