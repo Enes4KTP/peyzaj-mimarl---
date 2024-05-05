@@ -87,6 +87,7 @@ button:focus {
 /* Slideshow container */
 .slideshow-container {
   position: relative;
+  text-align: ;
   /* margin-right: 450px; */
   /* margin: auto; */
 }
@@ -114,6 +115,7 @@ button:focus {
   top: 50%;
   width: auto;
   margin-top: -22px;
+  background-color: rgba(128, 194, 37, 0.8);
   padding: 16px;
   color: white;
   font-weight: bold;
