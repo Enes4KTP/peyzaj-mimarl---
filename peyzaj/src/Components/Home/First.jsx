@@ -1,11 +1,11 @@
 import React from "react";
-import foto from "../../images/40771.jpg";
+import foto from "../../images/2.1.jpg";
 import { Box } from "@mui/material";
 
 function First() {
   return (
     <div>
-      <Box
+      {/* <Box
         sx={{
           height: "100vh",
           position: "relative",
@@ -16,11 +16,12 @@ function First() {
           style={{
             position: "absolute",
             width: "100%",
-            objectFit: "contain",
+            height: "80%",
+            objectFit: "fill",
             borderBottomRightRadius: "40%",
           }}
         />
-      </Box>
+      </Box> */}
     </div>
   );
 }

@@ -23,12 +23,16 @@ function Banner() {
           alignItems: "center",
         }}
       >
-        <Typography sx={{ fontSize: "3rem" }}>Ne İş Yaparlar?</Typography>
+        <div style={{ width: "70%", marginBottom: "2rem" }}>
+          <Typography sx={{ fontSize: "3rem" }}>Ne İş Yaparlar?</Typography>
+          <Typography sx={{ fontSize: "1rem" }}>
+            Peyzaj mimarları, doğayı güzelleştirmek için çalışan sanatçılardır.
+            Onlar, parklar, bahçeler ve daha birçok yerin tasarımını yaparlar.
+          </Typography>
+        </div>
         <Button
           variant="outlined"
-          sx={{
-            alignItems: "center",
-          }}
+          sx={{}}
           color="warning"
           endIcon={<SendIcon />}
         >
