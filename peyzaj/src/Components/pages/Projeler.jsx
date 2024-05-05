@@ -1,8 +1,9 @@
-import { Container, Grid, Typography, Button, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import React, { useState } from "react";
 import doga from "../../images/doga.png";
 import slide1 from "../../images/40771.jpg";
 import slide2 from "../../images/image5.png";
+import foto from "../../images/28572.jpg";
 
 function Projeler() {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -30,25 +31,22 @@ function Projeler() {
           height: "290px",
           backgroundColor: "#c5eef0",
           width: "100%",
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundImage: `url(${foto})`,
         }}
       >
         <Typography
-          style={{ fontSize: "32px", fontWeight: "bold", color: "white" }}
-        >
-          Bahçenizi renklendirin, <br></br>
-          doğanın büyülü dünyasını keşfedin.
-        </Typography>
-        <img
-          src={doga}
-          alt=""
-          style={{
-            marginLeft: "165px",
-            marginBottom: "20px",
-            width: "300px",
-            height: "300px",
-            borderRadius: "50%",
+          sx={{
+            fontSize: "32px",
+            fontWeight: "bold",
+            color: "#80c225",
+            textAlign: "center",
           }}
-        />
+        >
+          Doğanın Renkli Dünyası <br></br>
+          Peyzaj Mimarlığı
+        </Typography>
       </div>
       <Box
         sx={{

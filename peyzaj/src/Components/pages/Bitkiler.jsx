@@ -13,6 +13,7 @@ import festucaGlaucaMaviYumakOtu from "../../images/ithal/festucaGlaucaMaviYumak
 import euonymusFortuneiAureaTaflan from "../../images/calı-sarmasık/euonymusFortuneiAureaYayılıcıTaflan.jpg";
 import miscanthusSinensisVariegata from "../../images/calı-sarmasık/miscanthusSinensisVariegata.jpg";
 import phottiniaFraseriLittleRedBodurAlevÇalısı from "../../images/calı-sarmasık/phottiniaFraseriLittleRedBodurAlevÇalısı.webp";
+import foto from "../../images/28572.jpg";
 
 import plant from "../../images/animationplants/plant.png";
 
@@ -25,36 +26,24 @@ function Bitkiler() {
           justifyContent: "center",
           alignItems: "center",
           height: "290px",
-          backgroundColor: "#c5eef0",
           width: "100%",
-          backgroundImage: `url(${image2})`,
-
           backgroundSize: "contain",
           backgroundPosition: "center",
+          backgroundImage: `url(${foto})`,
         }}
       >
         <Typography
           sx={{
             fontSize: "32px",
             fontWeight: "bold",
-            color: "white",
+            color: "#80c225",
             textAlign: "center",
           }}
         >
-          Bahçenizi renklendirin, <br></br>
-          doğanın büyülü dünyasını keşfedin.
+          Bahçenizi Renklendirin,
+          <br></br>
+          Doğanın Büyülü Dünyasını Keşfedin.
         </Typography>
-        {/* <img
-          src={doga}
-          alt=""
-          style={{
-            marginLeft: "165px",
-            marginBottom: "20px",
-            width: "300px",
-            height: "300px",
-            borderRadius: "50%",
-          }}
-        /> */}
       </div>
       <Box sx={{ position: "absolute" }}>
         <Box
