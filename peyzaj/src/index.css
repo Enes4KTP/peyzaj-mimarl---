@@ -21,6 +21,24 @@
   }
 }
 
+@keyframes moveUpDownStudent {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(150px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes moveRight {
   0% {
     transform: translateX(-50px);

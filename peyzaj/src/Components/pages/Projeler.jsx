@@ -1,6 +1,6 @@
 import { Typography, Box } from "@mui/material";
 import React, { useState } from "react";
-import doga from "../../images/doga.png";
+import plants from "../../images/animationplants/plants.png";
 import foto from "../../images/28572.jpg";
 import slide1 from "../../images/projeler/Benjakitti-1.jpg";
 import slide2 from "../../images/projeler/Benjakitti-2.jpg";
@@ -64,7 +64,7 @@ function Projeler() {
   }
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <div
         style={{
           display: "flex",
@@ -90,6 +90,20 @@ function Projeler() {
           Peyzaj Mimarlığı
         </Typography>
       </div>
+
+      <Box sx={{ position: "absolute", zIndex: "99" }}>
+        <Box
+          sx={{
+            borderRadius: "50%",
+            padding: "2rem",
+            margin: "-10rem auto",
+            animation: "moveUpDownPlant 5s infinite alternate",
+          }}
+        >
+          <img src={plants} alt="" style={{ width: "250px" }} />
+        </Box>
+      </Box>
+
       <Box
         sx={{
           backgroundColor: "#80c225",
