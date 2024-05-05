@@ -92,7 +92,7 @@ function Projeler() {
       </div>
       <Box
         sx={{
-          backgroundColor: "#c5eef0",
+          backgroundColor: "#80c225",
           borderTopLeftRadius: "45%",
           borderBottomRightRadius: "35%",
           width: "1400px",
@@ -183,7 +183,7 @@ function Projeler() {
       </Box>
       <Box
         sx={{
-          backgroundColor: "#c5eef0",
+          backgroundColor: "#80c225",
           borderTopRightRadius: "45%",
           borderBottomLeftRadius: "35%",
           width: "1400px",
@@ -284,7 +284,7 @@ function Projeler() {
       </Box>
       <Box
         sx={{
-          backgroundColor: "#c5eef0",
+          backgroundColor: "#80c225",
           borderTopLeftRadius: "45%",
           borderBottomRightRadius: "35%",
           width: "1400px",
