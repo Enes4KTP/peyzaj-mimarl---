@@ -3,8 +3,15 @@ import React from "react";
 import foto1 from "../../images/bitki.png";
 import foto2 from "../../images/bitki1.png";
 import SendIcon from "@mui/icons-material/ArrowForwardIos";
+import { useNavigate } from "react-router-dom";
 
 function Projects() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/projeler");
+  };
+
   return (
     <Box
       sx={{
@@ -39,6 +46,7 @@ function Projects() {
           }}
           color="primary"
           endIcon={<SendIcon />}
+          onClick={handleClick}
         >
           Projeler
         </Button>

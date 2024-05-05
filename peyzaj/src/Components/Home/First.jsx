@@ -1,27 +1,28 @@
 import React from "react";
-import foto from "../../images/2.1.jpg";
+import foto from "../../images/2.2.jpg";
 import { Box } from "@mui/material";
 
 function First() {
   return (
     <div>
-      {/* <Box
+      <Box
         sx={{
-          height: "100vh",
+          height: "85vh",
           position: "relative",
         }}
       >
         <img
           src={foto}
+          alt=""
           style={{
             position: "absolute",
             width: "100%",
-            height: "80%",
-            objectFit: "fill",
+            height: "100%",
+            objectFit: "cover",
             borderBottomRightRadius: "40%",
           }}
         />
-      </Box> */}
+      </Box>
     </div>
   );
 }
