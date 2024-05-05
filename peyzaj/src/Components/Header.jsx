@@ -9,11 +9,13 @@ function Header() {
   const [isHovered1, setIsHovered1] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const [isHovered3, setIsHovered3] = useState(false);
+  const [isHovered4, setIsHovered4] = useState(false);
 
   const location = useLocation();
   const isActive1 = location.pathname === "/";
   const isActive2 = location.pathname === "/projeler";
   const isActive3 = location.pathname === "/bitkiler";
+  const isActive4 = location.pathname === "/peyzaj";
 
   return (
     <div>
@@ -57,8 +59,9 @@ function Header() {
               },
             }}
           >
-            Peyzaj Mimarlığı
+            Ana Sayfa
           </Link>
+
           <Link
             component={RouterLink}
             to="/projeler"
@@ -80,6 +83,7 @@ function Header() {
           >
             Projeler
           </Link>
+
           <Link
             component={RouterLink}
             to="/bitkiler"
@@ -99,6 +103,27 @@ function Header() {
             }}
           >
             Bitki Örtüsü
+          </Link>
+
+          <Link
+            component={RouterLink}
+            to="/peyzaj"
+            onMouseEnter={() => setIsHovered4(true)}
+            onMouseLeave={() => setIsHovered4(false)}
+            sx={{
+              color: isActive4 ? "orange" : "black",
+              borderBottom: isActive4 ? "3px solid orange" : "none",
+              textDecoration: "none",
+              textTransform: "uppercase",
+              transition: "transform 0.3s ease",
+              transform: isHovered4 ? "translateY(-10px)" : "translateY(0)",
+              "&:hover": {
+                color: "orange",
+                borderBottom: "3px solid orange",
+              },
+            }}
+          >
+            Peyzaj Mimarlığı
           </Link>
         </Box>
       </Box>
