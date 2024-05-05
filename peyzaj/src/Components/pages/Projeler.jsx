@@ -1,132 +1,119 @@
 import { Container, Grid, Typography, Button, Box } from "@mui/material";
 import React, { useState } from "react";
-import foto1 from "../../images/home2.png";
-import foto from "../../images/cevre.avif";
+import doga from "../../images/doga.png";
+import slide1 from "../../images/40771.jpg";
+import slide2 from "../../images/image5.png";
 
 function Projeler() {
-  const [animation, setAnimation] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(1);
+
+  function plusSlides(n) {
+    setSlideIndex((prevIndex) => {
+      let newIndex = prevIndex + n;
+      if (newIndex > 3) {
+        return 1;
+      } else if (newIndex < 1) {
+        return 3;
+      } else {
+        return newIndex;
+      }
+    });
+  }
+
   return (
     <div>
-      <Box
-        sx={{
-          height: "100vh",
-          marginTop: "-8.7rem",
-          backgroundImage: `url(${foto})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "290px",
+          backgroundColor: "#c5eef0",
+          width: "100%",
         }}
       >
         <Typography
-          sx={{
-            padding: "0 12%",
-            borderBottom: "4px solid purple",
-            borderTop: "4px solid purple",
-            color: "#FF8135",
-            textAlign: "center",
-            fontSize: "4rem",
-          }}
+          style={{ fontSize: "32px", fontWeight: "bold", color: "white" }}
         >
-          Peyzaj Mimarlarının{" "}
-          <span style={{ color: "#3E7A3D" }}>Sizin için Yaptığı Projeler</span>{" "}
-          Neler Olabilir?
+          Bahçenizi renklendirin, <br></br>
+          doğanın büyülü dünyasını keşfedin.
         </Typography>
-      </Box>
-      <section>
-        <Container
-          sx={{
-            backgroundColor: "#3E7A3D",
-            margin: "2rem 12%",
-            borderTopLeftRadius: "50%",
-            borderBottomRightRadius: "60%",
+        <img
+          src={doga}
+          alt=""
+          style={{
+            marginLeft: "165px",
+            marginBottom: "20px",
+            width: "300px",
+            height: "300px",
+            borderRadius: "50%",
+          }}
+        />
+      </div>
+      <Box
+        sx={{
+          backgroundColor: "#c5eef0",
+          borderTopLeftRadius: "45%",
+          borderBottomRightRadius: "35%",
+          width: "1400px",
+          height: "600px",
+          margin: "auto",
+          marginTop: "70px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            // justifyContent: "center",
+            // alignItems: "center",
+            padding: "50px",
           }}
         >
-          <Grid container alignItems="center">
-            <Grid item lg={6} md={12}>
-              <div>
-                <img
-                  onMouseEnter={() => setAnimation(true)}
-                  onMouseLeave={() => setAnimation(false)}
-                  src={foto1}
-                  alt=""
-                  style={{
-                    transition: "transform 0.3s ease",
-                    transform: animation
-                      ? "translateY(-20px)"
-                      : "translateY(0)",
-                  }}
-                />
-                <a href="#">
-                  <i></i>
-                </a>
-              </div>
-            </Grid>
-            <Grid item lg={6} md={12}>
-              <div>
-                <Typography variant="h4">EVLER</Typography>
-                <Typography>Yaşayacağınız en güzel evler</Typography>
-                <Typography variant="h2">
-                  Güzel, Modern & <span>Zevkli </span>
-                </Typography>
-                <Typography sx={{ width: "60%" }}>
-                  Aile bahçesi ve oyun alanı projesi, aile üyelerinin evlerinin
-                  yakınında doğayla bağlantı kurmalarını ve birlikte keyifli
-                  vakit geçirmelerini teşvik eder. Aynı zamanda, doğa sevgisi ve
-                  çevre bilinci gibi değerleri aile içinde yaygınlaştırır.
-                </Typography>
-              </div>
-            </Grid>
-          </Grid>
-        </Container>
-      </section>
+          <div className="slideshow-container">
+            <div
+              className="mySlides fade"
+              style={{ display: slideIndex === 1 ? "block" : "none" }}
+            >
+              <img src={slide1} alt="" />
+            </div>
 
-      <section>
-        <Container
-          sx={{
-            backgroundColor: "#FF8135",
-            margin: "2rem 12%",
-            borderTopRightRadius: "50%",
-            borderBottomLeftRadius: "60%",
-          }}
-        >
-          <Grid container alignItems="center">
-            <Grid item lg={6} md={12}>
-              <div style={{ paddingLeft: "4rem" }}>
-                <Typography variant="h4">Parklar</Typography>
-                <Typography>Doğa Oyun Alanı</Typography>
-                <Typography variant="h2">
-                  Doğal, Temiz & <span>Zevkli </span>
-                </Typography>
-                <Typography sx={{ width: "80%" }}>
-                  Sürdürülebilir doğa oyun alanı, çocukların hayal gücünü ve
-                  yaratıcılığını teşvik ederken aynı zamanda çevre bilinci ve
-                  doğa sevgisi kazanmalarını sağlar. Bu proje, çocukların açık
-                  havada eğlenirken doğayı koruma ve sürdürülebilirlik
-                  ilkelerini anlama fırsatı sunar.
-                </Typography>
-              </div>
-            </Grid>
-            <Grid item lg={6} md={12}>
-              <div>
-                <img
-                  onMouseEnter={() => setAnimation(true)}
-                  onMouseLeave={() => setAnimation(false)}
-                  src={foto1}
-                  alt=""
-                  style={{
-                    transition: "transform 0.3s ease",
-                    transform: animation
-                      ? "translateY(-20px)"
-                      : "translateY(0)",
-                  }}
-                />
-                <a href="#">
-                  <i></i>
-                </a>
-              </div>
-            </Grid>
-          </Grid>
-        </Container>
-      </section>
+            <div
+              className="mySlides fade"
+              style={{ display: slideIndex === 2 ? "block" : "none" }}
+            >
+              <img src={slide2} alt="" />
+            </div>
+
+            <div
+              className="mySlides fade"
+              style={{ display: slideIndex === 3 ? "block" : "none" }}
+            >
+              <img src={slide1} alt="" />
+            </div>
+
+            <button className="prev" onClick={() => plusSlides(-1)}>
+              &#10094;
+            </button>
+            <button className="next" onClick={() => plusSlides(1)}>
+              &#10095;
+            </button>
+          </div>
+          <div
+            style={{
+              width: "400px",
+              height: "400px",
+              marginTop: "40px",
+              marginLeft: "120px",
+              overflowWrap: "break-word",
+              wordWrap: "break-word",
+            }}
+          >
+            <Typography sx={{}}>
+              AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            </Typography>
+          </div>
+        </div>
+      </Box>
     </div>
   );
 }

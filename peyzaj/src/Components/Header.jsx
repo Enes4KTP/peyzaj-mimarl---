@@ -93,6 +93,7 @@ function Header() {
               color: isActive3 ? "orange" : "black",
               borderBottom: isActive3 ? "3px solid orange" : "none",
               textDecoration: "none",
+              marginRight: "4rem",
               textTransform: "uppercase",
               transition: "transform 0.3s ease",
               transform: isHovered3 ? "translateY(-10px)" : "translateY(0)",
@@ -113,6 +114,7 @@ function Header() {
             sx={{
               color: isActive4 ? "orange" : "black",
               borderBottom: isActive4 ? "3px solid orange" : "none",
+              marginRight: "4rem",
               textDecoration: "none",
               textTransform: "uppercase",
               transition: "transform 0.3s ease",
