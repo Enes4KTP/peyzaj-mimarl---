@@ -1,6 +1,7 @@
 import { Typography, Box } from "@mui/material";
 import React, { useState } from "react";
 import doga from "../../images/doga.png";
+import foto from "../../images/28572.jpg";
 import slide1 from "../../images/projeler/Benjakitti-1.jpg";
 import slide2 from "../../images/projeler/Benjakitti-2.jpg";
 import slide3 from "../../images/projeler/Benjakitti-3.jpg";
