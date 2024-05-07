@@ -1,134 +1,115 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Link from "@mui/material/Link";
-import { useState } from "react";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import MenuIcon from "@mui/icons-material/Menu";
 import { Link as RouterLink, useLocation } from "react-router-dom";
+import logo from "../images/animationplants/plant2..png";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      "Poetsen One", // Belirtilen Google Font'u ekliyoruz
+      "sans-serif",
+    ].join(","),
+  },
+});
 function Header() {
-  const [isHovered1, setIsHovered1] = useState(false);
-  const [isHovered2, setIsHovered2] = useState(false);
-  const [isHovered3, setIsHovered3] = useState(false);
-  const [isHovered4, setIsHovered4] = useState(false);
-
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
   const location = useLocation();
-  const isActive1 = location.pathname === "/";
-  const isActive2 = location.pathname === "/projeler";
-  const isActive3 = location.pathname === "/bitkiler";
-  const isActive4 = location.pathname === "/peyzaj";
+
+  const menuItems = [
+    { text: "Ana Sayfa", link: "/", isActive: location.pathname === "/" },
+    {
+      text: "Projeler",
+      link: "/projeler",
+      isActive: location.pathname === "/projeler",
+    },
+    {
+      text: "Bitki Örtüsü",
+      link: "/bitkiler",
+      isActive: location.pathname === "/bitkiler",
+    },
+    {
+      text: "Peyzaj Mimarlığı",
+      link: "/peyzaj",
+      isActive: location.pathname === "/peyzaj",
+    },
+  ];
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
 
   return (
-    <div>
-      <Box
-        sx={{
-          bgcolor: "white",
-          height: "7vh",
-          // borderRadius: "50px",
-          zIndex: "999",
-          position: "sticky",
-          width: "100%",
-          // boxShadow: "0px 0px 25px -1px rgba(0,0,0,0.75)",
-          top: "0px",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100%",
-          }}
-        >
-          <Link
-            component={RouterLink}
-            to="/"
-            onMouseEnter={() => setIsHovered1(true)}
-            onMouseLeave={() => setIsHovered1(false)}
-            sx={{
-              color: isActive1 ? "orange" : "black",
-              borderBottom: isActive1 ? "3px solid orange" : "none",
-              marginRight: "4rem",
-              textDecoration: "none",
-              textTransform: "uppercase",
-              transition: "transform 0.3s ease",
-              transform: isHovered1 ? "translateY(-10px)" : "translateY(0)",
-              "&:hover": {
-                color: "orange",
-                borderBottom: "3px solid orange",
-              },
-            }}
-          >
-            Ana Sayfa
-          </Link>
-
-          <Link
-            component={RouterLink}
-            to="/projeler"
-            onMouseEnter={() => setIsHovered2(true)}
-            onMouseLeave={() => setIsHovered2(false)}
-            sx={{
-              color: isActive2 ? "orange" : "black",
-              borderBottom: isActive2 ? "3px solid orange" : "none",
-              marginRight: "4rem",
-              textDecoration: "none",
-              textTransform: "uppercase",
-              transition: "transform 0.3s ease",
-              transform: isHovered2 ? "translateY(-10px)" : "translateY(0)",
-              "&:hover": {
-                color: "orange",
-                borderBottom: "3px solid orange",
-              },
-            }}
-          >
-            Projeler
-          </Link>
-
-          <Link
-            component={RouterLink}
-            to="/bitkiler"
-            onMouseEnter={() => setIsHovered3(true)}
-            onMouseLeave={() => setIsHovered3(false)}
-            sx={{
-              color: isActive3 ? "orange" : "black",
-              borderBottom: isActive3 ? "3px solid orange" : "none",
-              textDecoration: "none",
-              marginRight: "4rem",
-              textTransform: "uppercase",
-              transition: "transform 0.3s ease",
-              transform: isHovered3 ? "translateY(-10px)" : "translateY(0)",
-              "&:hover": {
-                color: "orange",
-                borderBottom: "3px solid orange",
-              },
-            }}
-          >
-            Bitki Örtüsü
-          </Link>
-
-          <Link
-            component={RouterLink}
-            to="/peyzaj"
-            onMouseEnter={() => setIsHovered4(true)}
-            onMouseLeave={() => setIsHovered4(false)}
-            sx={{
-              color: isActive4 ? "orange" : "black",
-              borderBottom: isActive4 ? "3px solid orange" : "none",
-              marginRight: "4rem",
-              textDecoration: "none",
-              textTransform: "uppercase",
-              transition: "transform 0.3s ease",
-              transform: isHovered4 ? "translateY(-10px)" : "translateY(0)",
-              "&:hover": {
-                color: "orange",
-                borderBottom: "3px solid orange",
-              },
-            }}
-          >
-            Peyzaj Mimarlığı
-          </Link>
-        </Box>
+    <ThemeProvider theme={theme}>
+      <Box>
+        <AppBar position="sticky" sx={{ bgcolor: "white" }}>
+          <Toolbar sx={{ marginRight: "10%" }}>
+            <img
+              src={logo}
+              alt=""
+              style={{ height: "4rem", marginRight: "auto", marginLeft: "10%" }}
+            />
+            <IconButton
+              color="inherit"
+              aria-label="menu"
+              edge="end"
+              onClick={toggleDrawer}
+              sx={{ display: { xs: "block", sm: "none" }, color: "black" }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+              {menuItems.map((item, index) => (
+                <Box key={index} sx={{ marginRight: "2rem" }}>
+                  <RouterLink
+                    to={item.link}
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    {" "}
+                    {/* Link rengini siyah yapar */}
+                    <ListItemText
+                      primary={item.text}
+                      primaryTypographyProps={{
+                        color: item.isActive ? "orange" : "inherit",
+                      }}
+                    />
+                  </RouterLink>
+                </Box>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
+        <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
+          <List>
+            {menuItems.map((item, index) => (
+              <ListItem key={index} button onClick={toggleDrawer}>
+                <RouterLink
+                  to={item.link}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  {" "}
+                  {/* Link rengini siyah yapar */}
+                  <ListItemText
+                    primary={item.text}
+                    primaryTypographyProps={{
+                      color: item.isActive ? "orange" : "inherit",
+                    }}
+                  />
+                </RouterLink>
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
       </Box>
-    </div>
+    </ThemeProvider>
   );
 }
 

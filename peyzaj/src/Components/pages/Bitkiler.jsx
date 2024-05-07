@@ -14,10 +14,14 @@ import euonymusFortuneiAureaTaflan from "../../images/calı-sarmasık/euonymusFo
 import miscanthusSinensisVariegata from "../../images/calı-sarmasık/miscanthusSinensisVariegata.jpg";
 import phottiniaFraseriLittleRedBodurAlevÇalısı from "../../images/calı-sarmasık/phottiniaFraseriLittleRedBodurAlevÇalısı.webp";
 import foto from "../../images/28572.jpg";
-
+import { useTheme } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
 import plant from "../../images/animationplants/plant.png";
+import Footer from "../Footer/Footer";
 
 function Bitkiler() {
+  const theme = useTheme();
+  const matchesSm = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <div style={{ position: "relative" }}>
       <div
@@ -45,7 +49,13 @@ function Bitkiler() {
           Doğanın Büyülü Dünyasını Keşfedin.
         </Typography>
       </div>
-      <Box sx={{ position: "absolute" }}>
+
+      <Box
+        sx={{
+          position: "absolute",
+          zIndex: "999",
+        }}
+      >
         <Box
           sx={{
             borderRadius: "50%",
@@ -54,7 +64,11 @@ function Bitkiler() {
             animation: "moveUpDownPlant 5s infinite alternate",
           }}
         >
-          <img src={plant} alt="" style={{ width: "250px" }} />
+          <img
+            src={plant}
+            alt=""
+            style={{ width: matchesSm ? "250px" : "100px" }}
+          />
         </Box>
       </Box>
 
@@ -74,7 +88,12 @@ function Bitkiler() {
           İthal Bitkiler
         </Box>
         <Box
-          sx={{ display: "flex", justifyContent: "center", marginTop: "40px" }}
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginTop: "40px",
+          }}
         >
           <Box
             className="container"
@@ -82,7 +101,6 @@ function Bitkiler() {
               width: "320px",
               height: "430px",
               bgcolor: "white",
-              // border: "2px solid black",
               marginRight: "20px",
             }}
           >
@@ -95,7 +113,13 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
               Cupressus Arizonica
             </Typography>
             <div className="overlay">
@@ -123,7 +147,13 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
               Pinus Slyvestris Bonsai
             </Typography>
             <div className="overlay">
@@ -142,7 +172,13 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
               Festuca Glauca Mavi Yumak Otu
             </Typography>
             <div className="overlay">
@@ -169,7 +205,12 @@ function Bitkiler() {
           Ağaçlar
         </Box>
         <Box
-          sx={{ display: "flex", justifyContent: "center", marginTop: "40px" }}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            marginTop: "40px",
+          }}
         >
           <Box
             className="container"
@@ -190,7 +231,13 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
               Acer Palmatum Atropurpureum
             </Typography>
             <div className="overlay">
@@ -218,7 +265,13 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
               Altuni Piramit Mazı
             </Typography>
             <div className="overlay">
@@ -237,7 +290,13 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
               Limoni Servi Cupressus
             </Typography>
             <div className="overlay">
@@ -263,7 +322,12 @@ function Bitkiler() {
           Çalı & Sarmaşıklar
         </Box>
         <Box
-          sx={{ display: "flex", justifyContent: "center", marginTop: "40px" }}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            marginTop: "40px",
+          }}
         >
           <Box
             className="container"
@@ -284,7 +348,13 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
               Euonymus Fortunei Aurea Taflan
             </Typography>
             <div className="overlay">
@@ -312,7 +382,13 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
               Miscanthus Sinensis Variegata
             </Typography>
             <div className="overlay">
@@ -331,7 +407,13 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
               Phottinia Fraseri Bodur Alev Çalısı
             </Typography>
             <div className="overlay">
@@ -357,7 +439,12 @@ function Bitkiler() {
           Güller
         </Box>
         <Box
-          sx={{ display: "flex", justifyContent: "center", marginTop: "40px" }}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            marginTop: "40px",
+          }}
         >
           <Box
             className="container"
@@ -365,7 +452,6 @@ function Bitkiler() {
               width: "320px",
               height: "430px",
               bgcolor: "white",
-              // border: "2px solid black",
               marginRight: "20px",
             }}
           >
@@ -378,7 +464,15 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>Mister Lincoln</Typography>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Mister Lincoln
+            </Typography>
             <div className="overlay">
               <div class="text">Mister Lincoln</div>
             </div>
@@ -404,7 +498,15 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>Rosa Sunsprite</Typography>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Rosa Sunsprite
+            </Typography>
             <div className="overlay">
               <div class="text">Rosa Sunsprite</div>
             </div>
@@ -421,7 +523,15 @@ function Bitkiler() {
                 height: "94%",
               }}
             />
-            <Typography style={{ fontSize: "18px" }}>Japon Gülü</Typography>
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Japon Gülü
+            </Typography>
             <div className="overlay">
               <div class="text">Japon Gülü</div>
             </div>
@@ -429,6 +539,7 @@ function Bitkiler() {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </div>
   );
 }

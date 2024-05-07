@@ -3,18 +3,15 @@ import { Box, styled } from "@mui/system";
 import foto from "../../images/28572.jpg";
 import foto2 from "../../images/dunya.png";
 import { Typography } from "@mui/material";
-import foto3 from "../../images/2.1.jpg";
+import foto3 from "../../images/image.png";
 import student from "../../images/student.png";
+import { useTheme } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
+import Footer from "../Footer/Footer";
 
 function Peyzaj() {
-  const RotateAnimation = styled(Box)(({ theme }) => ({
-    borderRadius: "50%",
-    padding: "2rem",
-    margin: "-10rem auto",
-    animation: "rotate 30s linear infinite", // rotate animasyonunu uygula
-    transformOrigin: "center center", // Dönüşün merkezini belirle
-  }));
-
+  const theme = useTheme();
+  const matchesSm = useMediaQuery(theme.breakpoints.up("sm"));
   return (
     <div>
       <div
@@ -42,18 +39,26 @@ function Peyzaj() {
           Peyzaj Mimarlığı
         </Typography>
       </div>
+
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: { xs: "column", sm: "row" },
           width: "70%",
           paddingTop: "4rem",
           margin: "auto",
         }}
       >
-        <RotateAnimation>
-          <img src={foto2} alt="" style={{ marginTop: "5rem" }} />
-        </RotateAnimation>
+        <Box
+          sx={{
+            borderRadius: "50%",
+            padding: "2rem",
+            margin: " auto",
+            animation: "moveUpDownWorld 2s infinite alternate",
+          }}
+        >
+          <img src={foto2} alt="" style={{ width: "250px" }} />
+        </Box>
         <Box
           sx={{
             display: "flex",
@@ -63,7 +68,7 @@ function Peyzaj() {
           }}
         >
           <Typography variant="h3">Peyzaj Mimarlığı Nedir?</Typography>
-          <Typography>
+          <Typography sx={{ textAlign: "justify" }}>
             Peyzaj mimarlığı, açık hava alanlarının tasarımı, planlaması ve
             yönetimiyle ilgilenen bir tasarım mesleğidir. Amacı, doğal ve yapay
             unsurların bir araya gelerek çevresel, sosyal ve estetik açıdan hoş
@@ -75,10 +80,11 @@ function Peyzaj() {
           </Typography>
         </Box>
       </Box>
+
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: { xs: "column", sm: "row" },
           width: "70%",
           paddingTop: "4rem",
           margin: "auto",
@@ -93,7 +99,7 @@ function Peyzaj() {
           }}
         >
           <Typography variant="h3">Peyzaj Mimarları Ne İş Yapar?</Typography>
-          <Typography>
+          <Typography sx={{ textAlign: "justify" }}>
             Peyzaj mimarları, doğal ve yapılı çevrenin analizi, planlaması,
             tasarımı ve yönetimiyle ilgilenirler. Çalışmaları, parklardan oyun
             alanlarına, su alanlarından şehirlerin genel tasarımına kadar geniş
@@ -103,13 +109,17 @@ function Peyzaj() {
             insan yaşam kalitesinin artırılması için çalışırlar.
           </Typography>
         </Box>
-        <img src={foto3} alt="" style={{ width: "40%" }} />
+        <img
+          src={foto3}
+          alt=""
+          style={{ margin: "auto", width: matchesSm ? "50%" : "100%" }}
+        />
       </Box>
 
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: { xs: "column", sm: "row" },
           width: "70%",
           paddingTop: "4rem",
           margin: "auto",
@@ -119,8 +129,8 @@ function Peyzaj() {
           sx={{
             borderRadius: "50%",
             padding: "2rem",
-            margin: "-10rem auto",
-            animation: "moveUpDownStudent 2s infinite alternate",
+            margin: " auto",
+            animation: "moveUpDownStudent 5s infinite alternate",
           }}
         >
           <img src={student} alt="" style={{ width: "250px" }} />
@@ -134,7 +144,7 @@ function Peyzaj() {
           }}
         >
           <Typography variant="h3">Nasıl Peyzaj Mimarı Olabilirim?</Typography>
-          <Typography>
+          <Typography sx={{ textAlign: "justify" }}>
             Peyzaj mimarı olmak istiyorsan, öncelikle doğayı ve dış mekanları
             sevmelisin. Peyzaj mimarı olmak için okulda matematik, fen bilgisi
             ve sanat derslerine iyi çalışmalısın. Üniversiteye gittiğinde peyzaj
@@ -147,6 +157,7 @@ function Peyzaj() {
           </Typography>
         </Box>
       </Box>
+      <Footer />
     </div>
   );
 }

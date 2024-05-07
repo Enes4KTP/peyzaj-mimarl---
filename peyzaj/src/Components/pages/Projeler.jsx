@@ -1,19 +1,72 @@
-import { Typography, Box } from "@mui/material";
 import React, { useState } from "react";
-import plants from "../../images/animationplants/plants.png";
-import foto from "../../images/28572.jpg";
+import { Typography, Box, Button } from "@mui/material";
+import { styled } from "@mui/system";
+
 import slide1 from "../../images/projeler/Benjakitti-1.jpg";
 import slide2 from "../../images/projeler/Benjakitti-2.jpg";
 import slide3 from "../../images/projeler/Benjakitti-3.jpg";
 import slide4 from "../../images/projeler/Benjakitti-4.jpg";
+
 import slide5 from "../../images/projeler/leMeridien-1.jpg";
 import slide6 from "../../images/projeler/leMeridien-2.jpg";
 import slide7 from "../../images/projeler/leMeridien-3.jpg";
 import slide8 from "../../images/projeler/leMeridien-4.jpg";
+
 import slide9 from "../../images/projeler/Opera1.jpg";
 import slide10 from "../../images/projeler/Opera2.jpg";
 import slide11 from "../../images/projeler/Opera3.jpg";
 import slide12 from "../../images/projeler/Opera4.jpg";
+import plant from "../../images/animationplants/plant.png";
+import Footer from "../../Components/Footer/Footer";
+import { useTheme } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
+import foto from "../../images/28572.jpg";
+
+const SlideshowContainer = styled(Box)({
+  position: "relative",
+  textAlign: "center",
+});
+
+const MySlides = styled(Box)(({ theme }) => ({
+  display: "none",
+  width: "700px",
+  height: "500px",
+  borderRadius: "15px",
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    height: "auto",
+  },
+}));
+
+const SlideshowImage = styled("img")({
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+});
+
+const PrevNextButton = styled(Button)({
+  cursor: "pointer",
+  position: "absolute",
+  top: "50%",
+  transform: "translateY(-50%)",
+  backgroundColor: "rgba(128, 194, 37, 0.8)",
+  padding: "16px",
+  color: "white",
+  fontWeight: "bold",
+  fontSize: "18px",
+  borderRadius: "3px",
+  userSelect: "none",
+  transition: "0.6s ease",
+  "&:hover": {
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
+  },
+  "&.next": {
+    right: 0,
+  },
+  "&.prev": {
+    left: 0,
+  },
+});
 
 function Projeler() {
   const [slideIndex1, setSlideIndex1] = useState(1);
@@ -23,55 +76,35 @@ function Projeler() {
   function plusSlides(slideNumber, n) {
     switch (slideNumber) {
       case 1:
-        setSlideIndex1((prevIndex) => {
-          let newIndex = prevIndex + n;
-          if (newIndex > 4) {
-            return 1;
-          } else if (newIndex < 1) {
-            return 4;
-          } else {
-            return newIndex;
-          }
-        });
+        setSlideIndex1((prevIndex) =>
+          prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
+        );
         break;
       case 2:
-        setSlideIndex2((prevIndex) => {
-          let newIndex = prevIndex + n;
-          if (newIndex > 4) {
-            return 1;
-          } else if (newIndex < 1) {
-            return 4;
-          } else {
-            return newIndex;
-          }
-        });
+        setSlideIndex2((prevIndex) =>
+          prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
+        );
         break;
       case 3:
-        setSlideIndex3((prevIndex) => {
-          let newIndex = prevIndex + n;
-          if (newIndex > 4) {
-            return 1;
-          } else if (newIndex < 1) {
-            return 4;
-          } else {
-            return newIndex;
-          }
-        });
+        setSlideIndex3((prevIndex) =>
+          prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
+        );
         break;
       default:
         break;
     }
   }
+  const theme = useTheme();
+  const matchesSm = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
-    <div style={{ position: "relative" }}>
+    <Box>
       <div
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           height: "290px",
-          backgroundColor: "#c5eef0",
           width: "100%",
           backgroundSize: "contain",
           backgroundPosition: "center",
@@ -86,87 +119,99 @@ function Projeler() {
             textAlign: "center",
           }}
         >
-          Doğanın Renkli Dünyası <br></br>
-          Peyzaj Mimarlığı
+          Bahçenizi Renklendirin,
+          <br></br>
+          Doğanın Büyülü Dünyasını Keşfedin.
         </Typography>
       </div>
-
-      <Box sx={{ position: "absolute", zIndex: "99" }}>
+      <Box
+        sx={{
+          position: "absolute",
+          zIndex: "999",
+          right: "5px",
+        }}
+      >
         <Box
           sx={{
             borderRadius: "50%",
             padding: "2rem",
             margin: "-10rem auto",
-            animation: "moveUpDownPlant 5s infinite alternate",
+            animation: "moveUpDownProject 15s infinite alternate",
           }}
         >
-          <img src={plants} alt="" style={{ width: "250px" }} />
+          <img
+            src={plant}
+            alt=""
+            style={{ width: matchesSm ? "250px" : "100px" }}
+          />
         </Box>
       </Box>
-
       <Box
+        sx={{
+          position: "absolute",
+          zIndex: "999",
+        }}
+      >
+        <Box
+          sx={{
+            borderRadius: "50%",
+            padding: "2rem",
+            margin: "-10rem auto",
+            animation: "moveUpDownProject 15s infinite alternate",
+          }}
+        >
+          <img
+            src={plant}
+            alt=""
+            style={{ width: matchesSm ? "250px" : "100px" }}
+          />
+        </Box>
+      </Box>
+      <SlideshowContainer
         sx={{
           backgroundColor: "#80c225",
           borderTopLeftRadius: "45%",
           borderBottomRightRadius: "35%",
-          width: "1400px",
-          height: "600px",
+          width: "80%",
+          height: "100%",
           margin: "auto",
           marginTop: "70px",
         }}
       >
-        <div
-          style={{
+        <Box
+          sx={{
             display: "flex",
-            // justifyContent: "center",
-            // alignItems: "center",
             padding: "50px",
+            flexDirection: { xs: "column", sm: "row" },
           }}
         >
-          <div className="slideshow-container">
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex1 === 1 ? "block" : "none" }}
-            >
-              <img src={slide1} alt="" />
-            </div>
-
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex1 === 2 ? "block" : "none" }}
-            >
-              <img src={slide2} alt="" />
-            </div>
-
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex1 === 3 ? "block" : "none" }}
-            >
-              <img src={slide3} alt="" />
-            </div>
-
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex1 === 4 ? "block" : "none" }}
-            >
-              <img src={slide4} alt="" />
-            </div>
-
-            <button className="prev" onClick={() => plusSlides(1, -1)}>
+          <Box className="slideshow-container">
+            <MySlides style={{ display: slideIndex1 === 1 ? "block" : "none" }}>
+              <SlideshowImage src={slide1} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex1 === 2 ? "block" : "none" }}>
+              <SlideshowImage src={slide2} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex1 === 3 ? "block" : "none" }}>
+              <SlideshowImage src={slide3} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex1 === 4 ? "block" : "none" }}>
+              <SlideshowImage src={slide4} alt="" />
+            </MySlides>
+            <PrevNextButton className="prev" onClick={() => plusSlides(1, -1)}>
               &#10094;
-            </button>
-            <button className="next" onClick={() => plusSlides(1, -1)}>
+            </PrevNextButton>
+            <PrevNextButton className="next" onClick={() => plusSlides(1, 1)}>
               &#10095;
-            </button>
-          </div>
-          <div
-            style={{
-              width: "400px",
-              height: "400px",
-              marginTop: "40px",
-              marginLeft: "120px",
+            </PrevNextButton>
+          </Box>
+          <Box
+            sx={{
+              width: "100%",
+              height: "100%",
+              marginTop: "3%",
+              marginLeft: "3%",
               overflowWrap: "break-word",
-              // wordWrap: "break-word",
             }}
           >
             <Typography
@@ -179,7 +224,12 @@ function Projeler() {
             >
               Benjakitti Orman Parkı
             </Typography>
-            <Typography sx={{ textAlign: "justify" }}>
+            <Typography
+              sx={{
+                textAlign: "justify",
+                fontSize: { xs: "0.8rem", sm: "1rem" },
+              }}
+            >
               Bangkok’un hareketli şehir hayatının ortasındaki eski bir tütün
               fabrikası -yağmur suyunun yıkıcı gücünü azaltan, kirlenmiş suyu
               filtreleyen ve çok ihtiyaç duyulan doğal yaşam habitatı sunan- az
@@ -192,42 +242,36 @@ function Projeler() {
               dönüştürerek şehir mühendisliği için tekrarlanabilir modüler bir
               yaklaşım sunulmuş.
             </Typography>
-          </div>
-        </div>
-      </Box>
-      <Box
+          </Box>
+        </Box>
+      </SlideshowContainer>
+
+      <SlideshowContainer
         sx={{
           backgroundColor: "#80c225",
           borderTopRightRadius: "45%",
           borderBottomLeftRadius: "35%",
-          width: "1400px",
-          height: "600px",
+          width: "80%",
+          height: "100%",
           margin: "auto",
           marginTop: "70px",
         }}
       >
-        <div
-          style={{
+        <Box
+          sx={{
             display: "flex",
             justifyContent: "space-between",
-            // alignItems: "center",
             padding: "50px",
+            flexDirection: { xs: "column", sm: "row" },
           }}
         >
-          {" "}
-          <div
-            style={{
-              width: "450px",
-              height: "400px",
-              marginTop: "40px",
-              marginLeft: "60px",
-              // marginRight: "160px",
-              // display: "flex", // İçeriği dikey ve yatayda ortalamak için
-              // justifyContent: "center", // İçeriği yatayda ortala
-              // alignItems: "center", // İçeriği dikeyde ortala
-              // flexDirection: "column",
+          <Box
+            sx={{
+              width: "100%",
+              height: "100%",
+              marginTop: "3%",
+              marginRight: "3%",
               overflowWrap: "break-word",
-              // wordWrap: "break-word",
             }}
           >
             <Typography
@@ -240,125 +284,93 @@ function Projeler() {
             >
               Le Meridien Hotel Peyzaj Projesi
             </Typography>
-            <Typography sx={{ textAlign: "justify" }}>
+            <Typography
+              sx={{
+                textAlign: "justify",
+                fontSize: { xs: "0.8rem", sm: "1rem" },
+              }}
+            >
               2013 yılında Neri & Hu tarafından tamamlanan beş yıldızlı otelin
               önündeki 6.000 m²'lik peyzaj projesi, otelin genel görünümünü
               iyileştirmeyi ve park alanlarını optimize etmeyi hedefliyor.
               Zhengzhou'nun tarihi tekstil dokuma endüstrisine bir saygı duruşu
               olarak, Shma tarafından yapılan peyzaj tasarımında, heykel benzeri
-              örgüler ve kıvrımlar kullanılarak estetik bir kamusal alan
-              oluşturulmuş. Çim şeritlerinin dalgalı deseni, geleneksel dokuma
-              makinelerini temsil ediyor. Paslanmaz çelik kaplı saksılar, şehir
-              otelinin kamusal ve özel karakterlerini vurgulamak için iki farklı
-              renkte kullanılmış; dışa dönük ve eğlenceli enerjiyi yansıtmak
-              için bronz, otel tarafından bakıldığında ise daha sakin bir
-              atmosfer sağlamak için siyah ayna kullanılmış. Yeraltı metro
-              istasyonunun yapıları dikkate alınarak peyzaj düzenlemesi yapılmış
-              ve acil durum merdiveni gibi unsurlar görsel olarak kamufle
-              edilmiş.
+              örgüler ve kıvrımlar kullanılarak estetik bir alan oluşturulmuş.
+              Paslanmaz çelik kaplı saksılar, şehir otelinin kamusal ve özel
+              karakterlerini vurgulamak için iki farklı renkte kullanılmış; dışa
+              dönük ve eğlenceli enerjiyi yansıtmak için bronz, otel tarafından
+              bakıldığında ise daha sakin bir atmosfer sağlamak için siyah ayna
+              kullanılmış.
             </Typography>
-          </div>
+          </Box>
           <div className="slideshow-container">
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex2 === 1 ? "block" : "none" }}
-            >
-              <img src={slide5} alt="" />
-            </div>
-
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex2 === 2 ? "block" : "none" }}
-            >
-              <img src={slide6} alt="" />
-            </div>
-
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex2 === 3 ? "block" : "none" }}
-            >
-              <img src={slide7} alt="" />
-            </div>
-
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex2 === 4 ? "block" : "none" }}
-            >
-              <img src={slide8} alt="" />
-            </div>
-
-            <button className="prev" onClick={() => plusSlides(2, -1)}>
+            <MySlides style={{ display: slideIndex2 === 1 ? "block" : "none" }}>
+              <SlideshowImage src={slide5} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex2 === 2 ? "block" : "none" }}>
+              <SlideshowImage src={slide6} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex2 === 3 ? "block" : "none" }}>
+              <SlideshowImage src={slide7} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex2 === 4 ? "block" : "none" }}>
+              <SlideshowImage src={slide8} alt="" />
+            </MySlides>
+            <PrevNextButton className="prev" onClick={() => plusSlides(2, -1)}>
               &#10094;
-            </button>
-            <button className="next" onClick={() => plusSlides(2, 1)}>
+            </PrevNextButton>
+            <PrevNextButton className="next" onClick={() => plusSlides(2, 1)}>
               &#10095;
-            </button>
+            </PrevNextButton>
           </div>
-        </div>
-      </Box>
-      <Box
+        </Box>
+      </SlideshowContainer>
+
+      <SlideshowContainer
         sx={{
           backgroundColor: "#80c225",
           borderTopLeftRadius: "45%",
           borderBottomRightRadius: "35%",
-          width: "1400px",
-          height: "600px",
+          width: "80%",
+          height: "100%",
           margin: "auto",
           marginTop: "70px",
         }}
       >
-        <div
-          style={{
+        <Box
+          sx={{
             display: "flex",
-            // justifyContent: "center",
-            // alignItems: "center",
             padding: "50px",
+            flexDirection: { xs: "column", sm: "row" },
           }}
         >
           <div className="slideshow-container">
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex3 === 1 ? "block" : "none" }}
-            >
-              <img src={slide9} alt="" />
-            </div>
-
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex3 === 2 ? "block" : "none" }}
-            >
-              <img src={slide10} alt="" />
-            </div>
-
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex3 === 3 ? "block" : "none" }}
-            >
-              <img src={slide11} alt="" />
-            </div>
-
-            <div
-              className="mySlides fade"
-              style={{ display: slideIndex3 === 4 ? "block" : "none" }}
-            >
-              <img src={slide12} alt="" />
-            </div>
-
-            <button className="prev" onClick={() => plusSlides(3, -1)}>
+            <MySlides style={{ display: slideIndex3 === 1 ? "block" : "none" }}>
+              <SlideshowImage src={slide9} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex3 === 2 ? "block" : "none" }}>
+              <SlideshowImage src={slide10} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex3 === 3 ? "block" : "none" }}>
+              <SlideshowImage src={slide11} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex3 === 4 ? "block" : "none" }}>
+              <SlideshowImage src={slide12} alt="" />
+            </MySlides>
+            <PrevNextButton className="prev" onClick={() => plusSlides(3, -1)}>
               &#10094;
-            </button>
-            <button className="next" onClick={() => plusSlides(3, -1)}>
+            </PrevNextButton>
+            <PrevNextButton className="next" onClick={() => plusSlides(3, 1)}>
               &#10095;
-            </button>
+            </PrevNextButton>
           </div>
-          <div
-            style={{
-              width: "400px",
-              height: "400px",
-              marginTop: "40px",
-              marginLeft: "120px",
+          <Box
+            sx={{
+              width: "100%",
+              height: "100%",
+              marginTop: "3%",
+              marginLeft: "3%",
               overflowWrap: "break-word",
-              // wordWrap: "break-word",
             }}
           >
             <Typography
@@ -371,7 +383,12 @@ function Projeler() {
             >
               Opera Park
             </Typography>
-            <Typography sx={{ textAlign: "justify" }}>
+            <Typography
+              sx={{
+                textAlign: "justify",
+                fontSize: { xs: "0.8rem", sm: "1rem" },
+              }}
+            >
               2019 yılında bir tasarım yarışmasının ardından, The A.P. Møller
               Foundation, Kopenhag'da yeni bir park projesi için Cobe firmasını
               seçti. Park, Danimarka Kraliyet Operası'nın yanında bulunan bir
@@ -385,10 +402,12 @@ function Projeler() {
               Tüm bunlar, parkın ziyaretçilere dinlenme ve keşfetme imkanı sunan
               çekici bir mekan olduğunu gösteriyor.
             </Typography>
-          </div>
-        </div>
-      </Box>
-    </div>
+          </Box>
+        </Box>
+      </SlideshowContainer>
+
+      <Footer />
+    </Box>
   );
 }
 
