@@ -50,7 +50,7 @@ function Header() {
   return (
     <ThemeProvider theme={theme}>
       <Box>
-        <AppBar position="sticky" sx={{ bgcolor: "white" }}>
+        <AppBar position="sticky" sx={{ bgcolor: "#eeedea" }}>
           <Toolbar sx={{ marginRight: "10%" }}>
             <img
               src={logo}

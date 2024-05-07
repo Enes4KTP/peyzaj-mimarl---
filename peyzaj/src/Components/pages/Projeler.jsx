@@ -20,7 +20,7 @@ import plant from "../../images/animationplants/plant.png";
 import Footer from "../../Components/Footer/Footer";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
-import foto from "../../images/28572.jpg";
+import foto from "../../images/banner2.jpg";
 
 const SlideshowContainer = styled(Box)({
   position: "relative",
@@ -106,7 +106,7 @@ function Projeler() {
           alignItems: "center",
           height: "290px",
           width: "100%",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundImage: `url(${foto})`,
         }}
