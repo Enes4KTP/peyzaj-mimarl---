@@ -13,7 +13,8 @@ import festucaGlaucaMaviYumakOtu from "../../images/ithal/festucaGlaucaMaviYumak
 import euonymusFortuneiAureaTaflan from "../../images/calı-sarmasık/euonymusFortuneiAureaYayılıcıTaflan.jpg";
 import miscanthusSinensisVariegata from "../../images/calı-sarmasık/miscanthusSinensisVariegata.jpg";
 import phottiniaFraseriLittleRedBodurAlevÇalısı from "../../images/calı-sarmasık/phottiniaFraseriLittleRedBodurAlevÇalısı.webp";
-import foto from "../../images/28572.jpg";
+import foto from "../../images/banner2.jpg";
+
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import plant from "../../images/animationplants/plant.png";
@@ -31,7 +32,7 @@ function Bitkiler() {
           alignItems: "center",
           height: "290px",
           width: "100%",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundImage: `url(${foto})`,
         }}
