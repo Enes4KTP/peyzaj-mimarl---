@@ -3,7 +3,6 @@ import React from "react";
 import misterLincoln from "../../images/plants/kırmızı.jpg";
 import roseSunsprite from "../../images/plants/sarı.jpg";
 import japonGulu from "../../images/plants/image.png";
-import image2 from "../../images/trees/image2.png";
 import atropurpureum from "../../images/trees/atropurpureum.jpg";
 import altuniPiramitMazı from "../../images/trees/altuniPiramitMazı.jpg";
 import limoniServiCupressus from "../../images/trees/limoniServiCupressus.jpg";
@@ -13,11 +12,20 @@ import festucaGlaucaMaviYumakOtu from "../../images/ithal/festucaGlaucaMaviYumak
 import euonymusFortuneiAureaTaflan from "../../images/calı-sarmasık/euonymusFortuneiAureaYayılıcıTaflan.jpg";
 import miscanthusSinensisVariegata from "../../images/calı-sarmasık/miscanthusSinensisVariegata.jpg";
 import phottiniaFraseriLittleRedBodurAlevÇalısı from "../../images/calı-sarmasık/phottiniaFraseriLittleRedBodurAlevÇalısı.webp";
-import foto from "../../images/28572.jpg";
+import foto from "../../images/banner2.jpg";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import plant from "../../images/animationplants/plant.png";
 import Footer from "../Footer/Footer";
+import viburnumOpolus from "../../images/çiçek/viburnumOpolus.webp";
+import begonvilSarmaşığı from "../../images/çiçek/begonvilsarmaşığı.jpg";
+import bodurBegonvil from "../../images/çiçek/bodurBegonvil.webp";
+import stromantheSanguinea from "../../images/çiçek/stromantheSanguinea.webp";
+import spathiphyllum from "../../images/çiçek/spathiphyllum.jpg";
+import kufeyaLanesse from "../../images/çiçek/kufeyaLanesse.jpg";
+import cestrumNocturnum from "../../images/çiçek/cestrumNocturnum.jpg";
+import anthurium from "../../images/çiçek/Anthurium.jpg";
+import bougainvilleaAlexandra from "../../images/çiçek/bougainvilleaAlexandra.jpg";
 
 function Bitkiler() {
   const theme = useTheme();
@@ -31,7 +39,7 @@ function Bitkiler() {
           alignItems: "center",
           height: "290px",
           width: "100%",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundImage: `url(${foto})`,
         }}
@@ -123,7 +131,11 @@ function Bitkiler() {
               Cupressus Arizonica
             </Typography>
             <div className="overlay">
-              <div class="text">Cupressus Arizonica</div>
+              <div class="textBaslik">Cupressus Arizonica</div>
+              <div class="text" style={{}}>
+                Sıkça kullanılan bir süs bitkisi olup sert iklimlere
+                dayanıklıdır.
+              </div>
             </div>
             <hr></hr>
           </Box>
@@ -157,8 +169,13 @@ function Bitkiler() {
               Pinus Slyvestris Bonsai
             </Typography>
             <div className="overlay">
-              <div class="text">Pinus Slyvestris Bonsai</div>
+              <div class="textBaslik">Pinus Slyvestris Bonsai</div>
+              <div class="text" style={{}}>
+                Dayanıklı ve uzun ömürlü bir çam türü olup, estetik dallanma ve
+                iğne yapısı sayesinde popüler bir bonsai bitkisidir.
+              </div>
             </div>
+
             <hr></hr>
           </Box>
 
@@ -182,7 +199,11 @@ function Bitkiler() {
               Festuca Glauca Mavi Yumak Otu
             </Typography>
             <div className="overlay">
-              <div class="text">Festuca Glauca Mavi Yumak Otu</div>
+              <div class="textBaslik">Festuca Glauca Mavi Yumak Otu</div>
+              <div class="text" style={{}}>
+                Düşük bakım gerektiren ve genellikle süs bahçelerinde yer örtücü
+                olarak kullanılan bir bitkidir.
+              </div>
             </div>
             <hr></hr>
           </Box>
@@ -241,7 +262,11 @@ function Bitkiler() {
               Acer Palmatum Atropurpureum
             </Typography>
             <div className="overlay">
-              <div class="text">Acer Palmatum Atropurpureum</div>
+              <div class="textBaslik">Acer Palmatum Atropurpureum</div>
+              <div class="text" style={{}}>
+                Kırmızımsı mor yapraklarıyla dikkat çeken, genellikle bahçelerde
+                dekoratif amaçlarla kullanılan bir Japon akçaağaç türüdür.
+              </div>
             </div>
             <hr></hr>
           </Box>
@@ -275,7 +300,12 @@ function Bitkiler() {
               Altuni Piramit Mazı
             </Typography>
             <div className="overlay">
-              <div class="text">Altuni Piramit Mazı</div>
+              <div class="textBaslik">Altuni Piramit Mazı</div>
+              <div class="text" style={{}}>
+                Altın sarısı renkli yaprakları ve piramit şekilli büyüme
+                yapısıyla peyzaj düzenlemelerinde sıkça tercih edilen bir çalı
+                türüdür.
+              </div>
             </div>
             <hr></hr>
           </Box>
@@ -300,7 +330,11 @@ function Bitkiler() {
               Limoni Servi Cupressus
             </Typography>
             <div className="overlay">
-              <div class="text">Limoni Servi Cupressus</div>
+              <div class="textBaslik">Limoni Servi Cupressus</div>
+              <div class="text" style={{}}>
+                Hoş limon kokulu, altın sarısı yapraklarıyla dikkat çeken ve
+                genellikle dekoratif amaçlarla kullanılan bir servi türüdür.
+              </div>
             </div>
             <hr></hr>
           </Box>
@@ -358,7 +392,11 @@ function Bitkiler() {
               Euonymus Fortunei Aurea Taflan
             </Typography>
             <div className="overlay">
-              <div class="text">Euonymus Fortunei Aurea Taflan</div>
+              <div class="textBaslik">Euonymus Fortunei Aurea Taflan</div>
+              <div class="text" style={{}}>
+                Altın sarısı kenarlı yeşil yapraklarıyla tanınan, yer örtücü
+                veya çit bitkisi olarak kullanılan dayanıklı bir çalıdır.
+              </div>
             </div>
             <hr></hr>
           </Box>
@@ -392,7 +430,11 @@ function Bitkiler() {
               Miscanthus Sinensis Variegata
             </Typography>
             <div className="overlay">
-              <div class="text">Miscanthus Sinensis Variegata</div>
+              <div class="textBaslik">Miscanthus Sinensis Variegata</div>
+              <div class="text" style={{}}>
+                Yeşil ve beyaz çizgili yaprakları ve zarif duruşuyla peyzajda
+                dekoratif amaçlarla sıkça tercih edilen bir süs otu çeşididir.
+              </div>
             </div>
             <hr></hr>
           </Box>
@@ -417,7 +459,12 @@ function Bitkiler() {
               Phottinia Fraseri Bodur Alev Çalısı
             </Typography>
             <div className="overlay">
-              <div class="text">Phottinia Fraseri Bodur Alev Çalısı</div>
+              <div class="textBaslik">Phottinia Fraseri Bodur Alev Çalısı</div>
+              <div class="text" style={{}}>
+                Yeni büyüyen kırmızı yaprakları ve yoğun yaprak örtüsü ile
+                bahçelerde dekoratif çit veya çalı olarak sıkça kullanılan
+                dayanıklı bir bitkidir.
+              </div>
             </div>
             <hr></hr>
           </Box>
@@ -436,7 +483,7 @@ function Bitkiler() {
             },
           }}
         >
-          Güller
+          Çiçekler
         </Box>
         <Box
           sx={{
@@ -474,7 +521,11 @@ function Bitkiler() {
               Mister Lincoln
             </Typography>
             <div className="overlay">
-              <div class="text">Mister Lincoln</div>
+              <div class="textBaslik">Mister Lincoln</div>
+              <div class="text" style={{}}>
+                Büyük ve kadifemsi koyu kırmızı çiçekleriyle tanınan, yoğun
+                kokulu bir gül çeşididir.
+              </div>
             </div>
             <hr></hr>
           </Box>
@@ -508,7 +559,11 @@ function Bitkiler() {
               Rosa Sunsprite
             </Typography>
             <div className="overlay">
-              <div class="text">Rosa Sunsprite</div>
+              <div class="textBaslik">Rosa Sunsprite</div>
+              <div class="text" style={{}}>
+                Parlak sarı çiçekleri ve güçlü kokusuyla bilinen, hastalıklara
+                dayanıklı bir gül çeşididir.
+              </div>
             </div>
             <hr></hr>
           </Box>
@@ -533,7 +588,350 @@ function Bitkiler() {
               Japon Gülü
             </Typography>
             <div className="overlay">
-              <div class="text">Japon Gülü</div>
+              <div class="textBaslik">Japon Gülü</div>
+              <div class="text" style={{}}>
+                Büyük ve renkli çiçekleriyle bilinen, yaygın olarak peyzajda
+                kullanılan bir çalı türüdür.
+              </div>
+            </div>
+            <hr></hr>
+          </Box>
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            marginTop: "40px",
+          }}
+        >
+          <Box
+            className="container"
+            sx={{
+              width: "320px",
+              height: "430px",
+              bgcolor: "white",
+              marginRight: "20px",
+            }}
+          >
+            <img
+              src={begonvilSarmaşığı}
+              alt=""
+              style={{
+                backgroundSize: "auto",
+                width: "100%",
+                height: "94%",
+              }}
+            />
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Begonvil Sarmaşığı
+            </Typography>
+            <div className="overlay">
+              <div class="textBaslik">Begonvil Sarmaşığı</div>
+              <div class="text" style={{}}>
+                Zarif ve renkli çiçekleriyle bilinen, genellikle saksılarda veya
+                pergolalarda yetiştirilen bir sarmaşık türüdür.
+              </div>
+            </div>
+            <hr></hr>
+          </Box>
+
+          <Box
+            className="container"
+            sx={{
+              width: "320px",
+              height: "430px",
+              bgcolor: "white",
+              marginRight: "20px",
+            }}
+          >
+            <img
+              src={viburnumOpolus}
+              alt=""
+              style={{
+                backgroundSize: "auto",
+                width: "100%",
+                height: "94%",
+              }}
+            />
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Viburnum Opolus
+            </Typography>
+            <div className="overlay">
+              <div class="textBaslik">Viburnum Opolus</div>
+              <div class="text" style={{}}>
+                Beyaz çiçekleri ve parlak kırmızı meyveleriyle dikkat çeken, süs
+                değeri yüksek bir çalı türüdür.
+              </div>
+            </div>
+            <hr></hr>
+          </Box>
+
+          <Box className="container">
+            <img
+              src={bodurBegonvil}
+              alt=""
+              style={{
+                backgroundSize: "auto",
+                width: "100%",
+                height: "94%",
+              }}
+            />
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Bodur Begonvil
+            </Typography>
+            <div className="overlay">
+              <div class="textBaslik">Bodur Begonvil</div>
+              <div class="text" style={{}}>
+                Kompakt yapısı ve çeşitli renklerdeki çiçekleriyle dikkat çeken,
+                genellikle saksılarda veya küçük bahçelerde yetiştirilen bir
+                begonvil çeşididir.
+              </div>
+            </div>
+            <hr></hr>
+          </Box>
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            marginTop: "40px",
+          }}
+        >
+          <Box
+            className="container"
+            sx={{
+              width: "320px",
+              height: "430px",
+              bgcolor: "white",
+              marginRight: "20px",
+            }}
+          >
+            <img
+              src={stromantheSanguinea}
+              alt=""
+              style={{
+                backgroundSize: "auto",
+                width: "100%",
+                height: "94%",
+              }}
+            />
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Stromanthe Sanguinea
+            </Typography>
+            <div className="overlay">
+              <div class="textBaslik">Stromanthe Sanguinea</div>
+              <div class="text" style={{}}>
+                Çarpıcı renkli yaprakları ve çekici desenleriyle tanınan, iç
+                mekanlarda yetiştirilen dekoratif bir bitki türüdür.
+              </div>
+            </div>
+            <hr></hr>
+          </Box>
+
+          <Box
+            className="container"
+            sx={{
+              width: "320px",
+              height: "430px",
+              bgcolor: "white",
+              // border: "2px solid black",
+              marginRight: "20px",
+            }}
+          >
+            <img
+              src={spathiphyllum}
+              alt=""
+              style={{
+                backgroundSize: "auto",
+                width: "100%",
+                height: "94%",
+              }}
+            />
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Spathiphyllum
+            </Typography>
+            <div className="overlay">
+              <div class="textBaslik">Spathiphyllum</div>
+              <div class="text" style={{}}>
+                Düşük bakım gerektiren ve zarif beyaz çiçekleriyle dikkat çeken
+                bir iç mekan bitkisidir.
+              </div>
+            </div>
+            <hr></hr>
+          </Box>
+
+          <Box className="container">
+            <img
+              src={kufeyaLanesse}
+              alt=""
+              style={{
+                backgroundSize: "auto",
+                width: "100%",
+                height: "94%",
+              }}
+            />
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Cennet Çiçeği
+            </Typography>
+            <div className="overlay">
+              <div class="textBaslik">Cennet Çiçeği</div>
+              <div class="text" style={{}}>
+                Büyük ve gösterişli çiçekleriyle tanınan egzotik bir bitki
+                türüdür.
+              </div>
+            </div>
+            <hr></hr>
+          </Box>
+        </Box>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            marginTop: "40px",
+          }}
+        >
+          <Box
+            className="container"
+            sx={{
+              width: "320px",
+              height: "430px",
+              bgcolor: "white",
+              marginRight: "20px",
+            }}
+          >
+            <img
+              src={cestrumNocturnum}
+              alt=""
+              style={{
+                backgroundSize: "auto",
+                width: "100%",
+                height: "94%",
+              }}
+            />
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Cestrum Nocturnum
+            </Typography>
+            <div className="overlay">
+              <div class="textBaslik">Cestrum Nocturnum</div>
+              <div class="text" style={{}}>
+                Güçlü ve tatlı kokulu beyaz çiçekleri gece boyunca açan bir çalı
+                türüdür.
+              </div>
+            </div>
+            <hr></hr>
+          </Box>
+
+          <Box
+            className="container"
+            sx={{
+              width: "320px",
+              height: "430px",
+              bgcolor: "white",
+              // border: "2px solid black",
+              marginRight: "20px",
+            }}
+          >
+            <img
+              src={anthurium}
+              alt=""
+              style={{
+                backgroundSize: "auto",
+                width: "100%",
+                height: "94%",
+              }}
+            />
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Anthurium
+            </Typography>
+            <div className="overlay">
+              <div class="textBaslik">Anthurium </div>
+              <div class="text" style={{}}>
+                Parlak ve derin renkli çiçekleriyle bilinen, iç mekanlarda
+                yetiştirilen popüler bir bitki türüdür.
+              </div>
+            </div>
+            <hr></hr>
+          </Box>
+
+          <Box className="container">
+            <img
+              src={bougainvilleaAlexandra}
+              alt=""
+              style={{
+                backgroundSize: "auto",
+                width: "100%",
+                height: "94%",
+              }}
+            />
+            <Typography
+              style={{
+                fontSize: "18px",
+                marginTop: "-7px",
+                marginBottom: "-3px",
+              }}
+            >
+              Bougainvillea Alexandra
+            </Typography>
+            <div className="overlay">
+              <div class="textBaslik"> Bougainvillea Alexandra</div>
+              <div class="text" style={{}}>
+                Canlı renkli çiçekleriyle bilinen ve sıcak iklimlerde
+                yetiştirilen bir sarmaşık türüdür.
+              </div>
             </div>
             <hr></hr>
           </Box>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, styled } from "@mui/system";
-import foto from "../../images/28572.jpg";
+import foto from "../../images/banner2.jpg";
 import foto2 from "../../images/dunya.png";
 import { Typography } from "@mui/material";
-import foto3 from "../../images/image.png";
+import foto3 from "../../images/2.png";
 import student from "../../images/student.png";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
@@ -22,7 +22,7 @@ function Peyzaj() {
           height: "290px",
           backgroundColor: "#c5eef0",
           width: "100%",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundImage: `url(${foto})`,
         }}

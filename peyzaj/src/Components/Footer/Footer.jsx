@@ -10,6 +10,7 @@ function Footer() {
         alignItems: "center",
         justifyContent: "center",
         opacity: "0.8",
+        borderTop: "1px solid lightgrey",
       }}
     >
       <Typography sx={{ textAlign: "center" }}>

@@ -15,6 +15,15 @@ body {
   }
 }
 
+@keyframes iletisim {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
 @keyframes moveUpDownPlant {
   0% {
     transform: translateY(0px);
@@ -22,6 +31,37 @@ body {
   100% {
     transform: translateY(250px);
   }
+}
+
+@keyframes moveX1 {
+  0% {
+    transform: translateX(0px);
+    background-color: #2b430a;
+  }
+  100% {
+    transform: translateX(60vw);
+    background-color: #d1ccd1e9;
+  }
+}
+
+@keyframes moveX2 {
+  0% {
+    transform: translateX(-60vw);
+    background-color: #509bb0;
+  }
+  100% {
+    transform: translateX(0);
+    background-color: #5f166a;
+  }
+}
+
+.text-with-gradient {
+  font-size: 2rem;
+  font-family: "Poetsen One", sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, #bf13dd, #008f40);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes moveUpDownProject {
@@ -105,6 +145,13 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.textBaslik {
+  font-size: 2rem;
+  color: #2b430a;
+  text-align: center;
+  padding-top: 3rem;
 }
 
 button {
