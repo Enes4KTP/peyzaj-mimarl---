@@ -40,6 +40,7 @@ function Bitkiler() {
           height: "290px",
           width: "100%",
           backgroundSize: "cover",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundImage: `url(${foto})`,
         }}

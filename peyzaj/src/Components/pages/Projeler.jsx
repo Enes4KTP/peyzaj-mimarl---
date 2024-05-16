@@ -16,6 +16,14 @@ import slide9 from "../../images/projeler/Opera1.jpg";
 import slide10 from "../../images/projeler/Opera2.jpg";
 import slide11 from "../../images/projeler/Opera3.jpg";
 import slide12 from "../../images/projeler/Opera4.jpg";
+import slide13 from "../../images/projeler/01.jpg";
+import slide14 from "../../images/projeler/03.jpg";
+import slide15 from "../../images/projeler/05.jpg";
+import slide16 from "../../images/projeler/10.jpg";
+import slide17 from "../../images/projeler/Honghu-5.jpg";
+import slide18 from "../../images/projeler/Honghu-8.jpg";
+import slide19 from "../../images/projeler/Honghu-11.jpg";
+import slide20 from "../../images/projeler/Honghu-12.jpg";
 import plant from "../../images/animationplants/plant.png";
 import Footer from "../../Components/Footer/Footer";
 import { useTheme } from "@mui/material/styles";
@@ -72,6 +80,8 @@ function Projeler() {
   const [slideIndex1, setSlideIndex1] = useState(1);
   const [slideIndex2, setSlideIndex2] = useState(1);
   const [slideIndex3, setSlideIndex3] = useState(1);
+  const [slideIndex4, setSlideIndex4] = useState(1);
+  const [slideIndex5, setSlideIndex5] = useState(1);
 
   function plusSlides(slideNumber, n) {
     switch (slideNumber) {
@@ -87,6 +97,16 @@ function Projeler() {
         break;
       case 3:
         setSlideIndex3((prevIndex) =>
+          prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
+        );
+        break;
+        case 4:
+        setSlideIndex4((prevIndex) =>
+          prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
+        );
+        break;
+        case 5:
+        setSlideIndex5((prevIndex) =>
           prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
         );
         break;
@@ -119,9 +139,9 @@ function Projeler() {
             textAlign: "center",
           }}
         >
-          Bahçenizi Renklendirin,
+          Doğayla dans eden yapılar,
           <br></br>
-          Doğanın Büyülü Dünyasını Keşfedin.
+          hayata estetik bir nefes katar.
         </Typography>
       </div>
       <Box
@@ -401,6 +421,155 @@ function Projeler() {
               nilüfer göletleri, yansıtıcı havuzlar gibi özellikler bulunuyor.
               Tüm bunlar, parkın ziyaretçilere dinlenme ve keşfetme imkanı sunan
               çekici bir mekan olduğunu gösteriyor.
+            </Typography>
+          </Box>
+        </Box>
+      </SlideshowContainer>
+
+      <SlideshowContainer
+        sx={{
+          backgroundColor: "#80c225",
+          borderTopRightRadius: "45%",
+          borderBottomLeftRadius: "35%",
+          width: "80%",
+          height: "100%",
+          margin: "auto",
+          marginTop: "70px",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "50px",
+            flexDirection: { xs: "column", sm: "row" },
+          }}
+        >
+          <Box
+            sx={{
+              width: "100%",
+              height: "100%",
+              marginTop: "3%",
+              marginRight: "3%",
+              overflowWrap: "break-word",
+            }}
+          >
+            <Typography
+              sx={{
+                textAlign: "center",
+                fontSize: "26px",
+                marginBottom: "10px",
+                fontWeight: "bold",
+              }}
+            >
+              Düden Şelalesi Çevre Düzenlemesi
+            </Typography>
+            <Typography
+              sx={{
+                textAlign: "justify",
+                fontSize: { xs: "0.8rem", sm: "1rem" },
+              }}
+            >
+              Düden Şelalesi ve çevresinin düzenlenmesi projesinin ana amacı şelale etrafındaki yoğun bitkili alanların rehabilitasyonunu yapmak; Antalya kenti yeşil alan sistemine günümüz kullanıcılarının ihtiyaçlarına hitap eden, mekan kalitesi yüksek ve program açısından çeşitlilik sunan bir açık ve yeşil alan kazandırmaktır. Tasarımda alanın fiziksel ve sosyal taşıma kapasitesi gözetilerek farklı yaş gruplarına hitap eden mekanların oluşturulmasına dikkat edilmiştir.  Ayrıca alandaki güneş-gölge durumu ve  ısı adası etkilerinin minimuma indirgenmesine yönelik mikro klima oluşturulmasını sağlayan bir tasarım yaklaşımı takip edilmiştir.
+
+Proje 3 ana zon ve bu zonlar altında pek çok aktiviteyi barındıran alt zonlardan oluşmaktadır.  Bu zonların oluşmasında topoğrafya, mevcut bitki örtüsü, alan kullanımları, bakı, mevcut işlevler, kullanıcı profili ve alanın Antalya açık ve yeşil alan sistemindeki yerinin analizi rol oynamıştır.  Alanın güçlü ve zayıf yönleri ve ayrıca sunduğu fırsatlar değerlendirilerek planlama, peyzaj mimarlığı, mimarlık ekseninde entegre tasarımlar her bir zon için ortaya konulmuştur.  Bu zonların temel karakteristikleri aşağıda sunulmaktadır.
+            </Typography>
+          </Box>
+          <div className="slideshow-container">
+            <MySlides style={{ display: slideIndex4 === 1 ? "block" : "none" }}>
+              <SlideshowImage src={slide13} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex4 === 2 ? "block" : "none" }}>
+              <SlideshowImage src={slide14} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex4 === 3 ? "block" : "none" }}>
+              <SlideshowImage src={slide15} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex4 === 4 ? "block" : "none" }}>
+              <SlideshowImage src={slide16} alt="" />
+            </MySlides>
+            <PrevNextButton className="prev" onClick={() => plusSlides(4, -1)}>
+              &#10094;
+            </PrevNextButton>
+            <PrevNextButton className="next" onClick={() => plusSlides(4, 1)}>
+              &#10095;
+            </PrevNextButton>
+          </div>
+        </Box>
+      </SlideshowContainer>
+
+      <SlideshowContainer
+        sx={{
+          backgroundColor: "#80c225",
+          borderTopLeftRadius: "45%",
+          borderBottomRightRadius: "35%",
+          width: "80%",
+          height: "100%",
+          margin: "auto",
+          marginTop: "70px",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            padding: "50px",
+            flexDirection: { xs: "column", sm: "row" },
+          }}
+        >
+          <div className="slideshow-container">
+            <MySlides style={{ display: slideIndex5 === 1 ? "block" : "none" }}>
+              <SlideshowImage src={slide17} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex5 === 2 ? "block" : "none" }}>
+              <SlideshowImage src={slide18} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex5 === 3 ? "block" : "none" }}>
+              <SlideshowImage src={slide19} alt="" />
+            </MySlides>
+            <MySlides style={{ display: slideIndex5 === 4 ? "block" : "none" }}>
+              <SlideshowImage src={slide20} alt="" />
+            </MySlides>
+            <PrevNextButton className="prev" onClick={() => plusSlides(5, -1)}>
+              &#10094;
+            </PrevNextButton>
+            <PrevNextButton className="next" onClick={() => plusSlides(5, 1)}>
+              &#10095;
+            </PrevNextButton>
+          </div>
+          <Box
+            sx={{
+              width: "100%",
+              height: "100%",
+              marginTop: "3%",
+              marginLeft: "3%",
+              overflowWrap: "break-word",
+            }}
+          >
+            <Typography
+              sx={{
+                textAlign: "center",
+                fontSize: "26px",
+                marginBottom: "10px",
+                fontWeight: "bold",
+              }}
+            >
+              Honghu Park Su Arıtma Tesisi
+            </Typography>
+            <Typography
+              sx={{
+                textAlign: "justify",
+                fontSize: { xs: "0.8rem", sm: "1rem" },
+              }}
+            >
+              Honghu Su Arıtma Tesisi, şehir su kirliliğini kontrol etmek için önemli bir proje olarak öne çıkıyor. Tasarımı, gelişmiş gömülü su arıtma teknolojisi kullanmasıyla dikkat çekiyor. NODE ekibi, tasarım sürecinde su arıtma tesisi üzerinde restore edilmiş yüzey peyzajı ve yer altı ofislerini bir araya getirdi.
+
+Proje, başlangıçta farklı beklentilerle karşı karşıya kaldı ve yer üstünde tasarım zorluklarıyla mücadele etti. Mimari ekip, mühendislik mantığından öteye geçerek estetik ve toplum dostu bir kamusal alan yaratmaya odaklandı.
+
+Geleneksel Lingnan bahçelerinden ilham alan tasarımda, çağdaş malzemeler ve tasarım dilleri kullanılarak pagoda, pavilyon, çardak gibi unsurlar modernize edildi. Kamusal sanat enstalasyonlarıyla su arıtma tesisi, nilüfer işareti ve kuş gözlem platformu gibi özelliklerle zenginleştirildi.
+
+Shenzhen Lotus Su Kültürü Üssü olarak adlandırılan proje, nilüferleri izlemek ve dinlenmek için popüler bir mekan haline geldi. Bu proje, su arıtma ve peyzaj mimarlığı disiplinlerinin birleşimini temsil ediyor ve altyapı projelerinde önemli bir adımı ifade ediyor.
+
+Firmanın amacı, su arıtma tesislerinin şehirde keyifli ve törensel mekanlar haline gelmesini sağlamak ve böylece altyapının önemini yeniden tanımlamak.
             </Typography>
           </Box>
         </Box>
