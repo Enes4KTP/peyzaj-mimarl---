@@ -100,12 +100,12 @@ function Projeler() {
           prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
         );
         break;
-        case 4:
+      case 4:
         setSlideIndex4((prevIndex) =>
           prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
         );
         break;
-        case 5:
+      case 5:
         setSlideIndex5((prevIndex) =>
           prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
         );
@@ -139,9 +139,9 @@ function Projeler() {
             textAlign: "center",
           }}
         >
-          Doğayla dans eden yapılar,
+          Doğayla Dans Eden Yapılar,
           <br></br>
-          hayata estetik bir nefes katar.
+          Hayata Estetik Bir Nefes Katar.
         </Typography>
       </div>
       <Box
@@ -470,9 +470,19 @@ function Projeler() {
                 fontSize: { xs: "0.8rem", sm: "1rem" },
               }}
             >
-              Düden Şelalesi ve çevresinin düzenlenmesi projesinin ana amacı şelale etrafındaki yoğun bitkili alanların rehabilitasyonunu yapmak; Antalya kenti yeşil alan sistemine günümüz kullanıcılarının ihtiyaçlarına hitap eden, mekan kalitesi yüksek ve program açısından çeşitlilik sunan bir açık ve yeşil alan kazandırmaktır. Tasarımda alanın fiziksel ve sosyal taşıma kapasitesi gözetilerek farklı yaş gruplarına hitap eden mekanların oluşturulmasına dikkat edilmiştir.  Ayrıca alandaki güneş-gölge durumu ve  ısı adası etkilerinin minimuma indirgenmesine yönelik mikro klima oluşturulmasını sağlayan bir tasarım yaklaşımı takip edilmiştir.
-
-Proje 3 ana zon ve bu zonlar altında pek çok aktiviteyi barındıran alt zonlardan oluşmaktadır.  Bu zonların oluşmasında topoğrafya, mevcut bitki örtüsü, alan kullanımları, bakı, mevcut işlevler, kullanıcı profili ve alanın Antalya açık ve yeşil alan sistemindeki yerinin analizi rol oynamıştır.  Alanın güçlü ve zayıf yönleri ve ayrıca sunduğu fırsatlar değerlendirilerek planlama, peyzaj mimarlığı, mimarlık ekseninde entegre tasarımlar her bir zon için ortaya konulmuştur.  Bu zonların temel karakteristikleri aşağıda sunulmaktadır.
+              Düden Şelalesi ve çevresinin düzenlenmesi projesinin ana amacı
+              şelale etrafındaki yoğun bitkili alanların rehabilitasyonunu
+              yapmak; Antalya kenti yeşil alan sistemine günümüz
+              kullanıcılarının ihtiyaçlarına hitap eden, mekan kalitesi yüksek
+              ve program açısından çeşitlilik sunan bir açık ve yeşil alan
+              kazandırmaktır. Tasarımda alanın fiziksel ve sosyal taşıma
+              kapasitesi gözetilerek farklı yaş gruplarına hitap eden mekanların
+              oluşturulmasına dikkat edilmiştir. Proje 3 ana zon ve bu zonlar
+              altında pek çok aktiviteyi barındıran alt zonlardan oluşmaktadır.
+              Bu zonların oluşmasında topoğrafya, mevcut bitki örtüsü, alan
+              kullanımları, bakı, mevcut işlevler, kullanıcı profili ve alanın
+              Antalya açık ve yeşil alan sistemindeki yerinin analizi rol
+              oynamıştır.
             </Typography>
           </Box>
           <div className="slideshow-container">
@@ -513,6 +523,7 @@ Proje 3 ana zon ve bu zonlar altında pek çok aktiviteyi barındıran alt zonla
           sx={{
             display: "flex",
             padding: "50px",
+            marginBottom: "40px",
             flexDirection: { xs: "column", sm: "row" },
           }}
         >
@@ -561,15 +572,20 @@ Proje 3 ana zon ve bu zonlar altında pek çok aktiviteyi barındıran alt zonla
                 fontSize: { xs: "0.8rem", sm: "1rem" },
               }}
             >
-              Honghu Su Arıtma Tesisi, şehir su kirliliğini kontrol etmek için önemli bir proje olarak öne çıkıyor. Tasarımı, gelişmiş gömülü su arıtma teknolojisi kullanmasıyla dikkat çekiyor. NODE ekibi, tasarım sürecinde su arıtma tesisi üzerinde restore edilmiş yüzey peyzajı ve yer altı ofislerini bir araya getirdi.
-
-Proje, başlangıçta farklı beklentilerle karşı karşıya kaldı ve yer üstünde tasarım zorluklarıyla mücadele etti. Mimari ekip, mühendislik mantığından öteye geçerek estetik ve toplum dostu bir kamusal alan yaratmaya odaklandı.
-
-Geleneksel Lingnan bahçelerinden ilham alan tasarımda, çağdaş malzemeler ve tasarım dilleri kullanılarak pagoda, pavilyon, çardak gibi unsurlar modernize edildi. Kamusal sanat enstalasyonlarıyla su arıtma tesisi, nilüfer işareti ve kuş gözlem platformu gibi özelliklerle zenginleştirildi.
-
-Shenzhen Lotus Su Kültürü Üssü olarak adlandırılan proje, nilüferleri izlemek ve dinlenmek için popüler bir mekan haline geldi. Bu proje, su arıtma ve peyzaj mimarlığı disiplinlerinin birleşimini temsil ediyor ve altyapı projelerinde önemli bir adımı ifade ediyor.
-
-Firmanın amacı, su arıtma tesislerinin şehirde keyifli ve törensel mekanlar haline gelmesini sağlamak ve böylece altyapının önemini yeniden tanımlamak.
+              Honghu Su Arıtma Tesisi, şehir su kirliliğini kontrol etmek için
+              önemli bir proje olarak öne çıkıyor. Tasarımı, gelişmiş gömülü su
+              arıtma teknolojisi kullanmasıyla dikkat çekiyor. NODE ekibi,
+              tasarım sürecinde su arıtma tesisi üzerinde restore edilmiş yüzey
+              peyzajı ve yer altı ofislerini bir araya getirdi. Proje,
+              başlangıçta farklı beklentilerle karşı karşıya kaldı ve yer
+              üstünde tasarım zorluklarıyla mücadele etti. Mimari ekip,
+              mühendislik mantığından öteye geçerek estetik ve toplum dostu bir
+              kamusal alan yaratmaya odaklandı. Geleneksel Lingnan bahçelerinden
+              ilham alan tasarımda, çağdaş malzemeler ve tasarım dilleri
+              kullanılarak pagoda, pavilyon, çardak gibi unsurlar modernize
+              edildi. Kamusal sanat enstalasyonlarıyla su arıtma tesisi, nilüfer
+              işareti ve kuş gözlem platformu gibi özelliklerle
+              zenginleştirildi.
             </Typography>
           </Box>
         </Box>
