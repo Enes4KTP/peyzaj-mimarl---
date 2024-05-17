@@ -597,6 +597,21 @@ function Projeler() {
         </Box>
       </SlideshowContainer>
 
+      <Box
+          sx={{
+            margin: "auto",
+            fontSize: "3rem",
+            marginTop: "30px",
+            fontWeight: "700",textAlign:'center',
+            "&:hover": {
+              color: "#80c225",
+              borderBottom: "2px solid",
+            },
+          }}
+        >
+          Öğrencilerden Projeler
+        </Box>
+
       <SlideshowContainer
         sx={{
           backgroundColor: "#80c225",
@@ -652,7 +667,7 @@ function Projeler() {
                 fontWeight: "bold",
               }}
             >
-              -------------------
+              Proje Başlığı
             </Typography>
             <Typography
               sx={{
@@ -660,7 +675,7 @@ function Projeler() {
                 fontSize: { xs: "0.8rem", sm: "1rem" },
               }}
             >
-              --------------------------
+              Proje Açıklaması
             </Typography>
           </Box>
         </Box>
