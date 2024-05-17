@@ -580,12 +580,28 @@ function Home() {
           sx={{
             textAlign: "center",
             fontSize: "2rem",
+
             fontFamily: "Poetsen One, sans-serif",
             color: "#5f166a",
           }}
         >
           Peyzaj Mimarları Neler Yaptı?
         </Box>
+        <Button
+          variant="outlined"
+          sx={{
+            alignItems: "center",
+            width: { xs: "80%", sm: "50%" },
+            margin: "4rem auto",
+            width: "200px",
+            height: "40px",
+          }}
+          color="primary"
+          endIcon={<SendIcon />}
+          onClick={handleClickProject}
+        >
+          Projeler
+        </Button>
         <Box
           sx={{
             height: "40vh",
