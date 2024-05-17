@@ -112,10 +112,10 @@ function Projeler() {
         );
         break;
       case 6:
-          setSlideIndex6((prevIndex) =>
-      prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
-      );
-      break;
+        setSlideIndex6((prevIndex) =>
+          prevIndex + n > 4 ? 1 : prevIndex + n < 1 ? 4 : prevIndex + n
+        );
+        break;
       default:
         break;
     }
@@ -162,7 +162,7 @@ function Projeler() {
             borderRadius: "50%",
             padding: "2rem",
             margin: "-10rem auto",
-            animation: "moveUpDownProject 15s infinite alternate",
+            animation: "moveUpDownProject 30s infinite alternate",
           }}
         >
           <img
@@ -183,7 +183,7 @@ function Projeler() {
             borderRadius: "50%",
             padding: "2rem",
             margin: "-10rem auto",
-            animation: "moveUpDownProject 15s infinite alternate",
+            animation: "moveUpDownProject 30s infinite alternate",
           }}
         >
           <img
@@ -598,19 +598,20 @@ function Projeler() {
       </SlideshowContainer>
 
       <Box
-          sx={{
-            margin: "auto",
-            fontSize: "3rem",
-            marginTop: "30px",
-            fontWeight: "700",textAlign:'center',
-            "&:hover": {
-              color: "#80c225",
-              borderBottom: "2px solid",
-            },
-          }}
-        >
-          Öğrencilerden Projeler
-        </Box>
+        sx={{
+          margin: "auto",
+          fontSize: "3rem",
+          marginTop: "30px",
+          fontWeight: "700",
+          textAlign: "center",
+          "&:hover": {
+            color: "#80c225",
+            borderBottom: "2px solid",
+          },
+        }}
+      >
+        Öğrencilerden Projeler
+      </Box>
 
       <SlideshowContainer
         sx={{
@@ -620,7 +621,8 @@ function Projeler() {
           width: "80%",
           height: "100%",
           margin: "auto",
-          marginTop: "70px",marginBottom:'80px',
+          marginTop: "70px",
+          marginBottom: "80px",
         }}
       >
         <Box
