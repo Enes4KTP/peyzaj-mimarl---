@@ -620,7 +620,7 @@ function Projeler() {
           width: "80%",
           height: "100%",
           margin: "auto",
-          marginTop: "70px",
+          marginTop: "70px",marginBottom:'80px',
         }}
       >
         <Box
