@@ -840,6 +840,7 @@ function Bitkiler() {
               height: "430px",
               bgcolor: "white",
               marginRight: "20px",
+              marginBottom:'70px'
             }}
           >
             <img
